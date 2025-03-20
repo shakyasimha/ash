@@ -6,9 +6,13 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h> 
+
+#include "ash_readline.h"
 
 // Shell loop
-void lsh_loop(void) {
+void ash_loop(void) {
 	char **line; 
 	char **args; 
 	int status; 
@@ -29,7 +33,7 @@ int main(int argc, char **argv) {
 	// Load config files, if any
 	
 	// Run command loop
-	lsh_loop();
+	ash_loop();
 
 	// Perform any shutdown/cleanup.
 	
